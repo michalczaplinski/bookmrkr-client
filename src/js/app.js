@@ -1,18 +1,21 @@
 $(document).ready(function() {
 
-  // $('a.item').on("click", function(e) {
-  //   e.preventDefault();
-  //   $('.item').removeClass('active');
-  //   $(this).addClass('active');
-  // });
-  $('.right.menu.open').on("click",function(e){
-        e.preventDefault();
-    $('.ui.vertical.menu').toggle();
+  $('.slidebar').on("click", function (e) {
+    $('.left.sidebar').sidebar('toggle');
   });
 
-  $('.ui.dropdown').dropdown();
+  $('.bookmark').hover(function () {
+    $(this).find('.iconbar').css('visibility', 'visible');
+  }, function() {
+    $(this).find('.iconbar').css('visibility', 'hidden');
+  });
+
+  $('.options').parent().on('click', function (e) {
+    $('.ui.modal').modal('show');
+  });
 
 });
+
 
 // var React = require('react')
 
