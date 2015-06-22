@@ -1,9 +1,3 @@
-/* top menu margins, perhaps redundant? */
-div.ui.grid {
-    margin-top: 1em;
-    margin-bottom: 2em;
-}
-
 /* sidebar items extra padding */
 body > div.ui.left.vertical.labeled.sidebar.menu.uncover > div.link.item {
     padding-top: 1.8em;
@@ -22,6 +16,7 @@ div.add.bookmark {
     bottom: 30px;
     right: 30px;
     z-index: 10;
+    box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
 }
 
 /* the logout button on the sidebar - positioning it at the bottom */
@@ -31,8 +26,20 @@ div.link.item.last {
     width: 100%;
 }
 
+/* get rid of rounded edges and add shadow to top menu and bookmarks */
+div.pusher > div.ui.menu.grid.items, div.pusher .ui.segment {
+box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+border-radius: 0;
+}
 
-/*.ui.menu.grid.items .item.settings:before {
+/* Add extra padding to the top menu */
+.ui.grid > .column:not(.row) {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* gets rid of the annoying vertical bar next to the right settings menu button. */
+.ui.menu.grid.items .item.settings:before {
     display: none;
     content: '';
     position: absolute;
@@ -40,12 +47,11 @@ div.link.item.last {
     right: 0px;
     width: 0px;
     height: 100%;
-}*/
+}
 
 
 /* SIDEBER WIDTH CUSTOMIZATION
-   original width: 260px, --> you should use SASS to set it as variable;
-*/
+   original width: 260px, --> you should use SASS to set it as variable; */
 .ui.left.sidebar {
     width: 220px;
 }
@@ -58,4 +64,9 @@ div.link.item.last {
 .ui.visible.left.sidebar ~ .fixed, .ui.visible.left.sidebar ~ .pusher {
     -webkit-transform: translate3d(220px, 0, 0);
     transform: translate3d(220px, 0, 0);
+}
+
+/*# need to adjust the padding at the top of the */
+body > div.pusher > div.ui.stackable.page.grid > div.column {
+    padding-top: 30px;
 }
