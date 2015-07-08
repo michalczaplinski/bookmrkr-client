@@ -1,19 +1,35 @@
 // compile sematic ui
-// transform jsx
-// browserify (require the modules)
-// uglify
-// serve
+
+// JS
+//  browserify (concatenate)
+//  minify
+//  copy
+
+// HTML
+//  copy html
+//  html replace
+
+// CSS
+//  purify
+//  minify
 
 
 var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-var htmlreplace = require('gulp-html-replace');
-var source = require('vinyl-source-stream');
-var browserify = require('browserify');
-var watchify = require('watchify');
-var reactify = require('reactify');
-var streamify = require('gulp-streamify');
+uglify = require('gulp-uglify');
+source = require('vinyl-source-stream');
+babel = require("gulp-babel");
+htmlreplace = require('gulp-html-replace');
+browserify = require('browserify');
+babelify = require('babelify');
+rename = require('gulp-rename');
+glob = require('glob');
+es = require('event-stream');
+browserSync = require('browser-sync').create();
 
+
+//var streamify = require('gulp-streamify');
+//var reactify = require('reactify');
+//var watchify = require('watchify');
 
 var build_semantic = require('./src/semantic/tasks/build');
 var watch_semantic = require('./src/semantic/tasks/watch');
@@ -22,63 +38,62 @@ gulp.task('watch-semantic', watch_semantic);
 gulp.task('build-semantic', build_semantic);
 
 var path = {
-  HTML: 'src/index.html',
-  MINIFIED_OUT: 'build.min.js',
-  OUT: 'build.js',
-  DEST: 'dist',
-  DEST_BUILD: 'dist/build',
-  DEST_SRC: 'dist/src',
-  ENTRY_POINT: './src/js/app.js'
+    HTML: 'src/html/**/*.html',
+    CSS: 'src/css/**/*.css',
+    JS: 'src/js/**/*.js',
+    SEMANTIC: 'src/semantic/**',
+    DEST: 'dist',
+    ENTRY_POINTS: ['./src/js/app.js', './src/js/index.js']
 };
 
+gulp.task('html', function () {
+    gulp.src(path.HTML)
+        .pipe(gulp.dest(path.DEST + '/html'));
+});
 
-gulp.task('copy', function(){
-  gulp.src(path.HTML)
-    .pipe(gulp.dest(path.DEST));
+gulp.task('css', function () {
+    gulp.src(path.CSS)
+        .pipe(gulp.dest(path.DEST + '/css'));
+});
+
+gulp.task('js', function () {
+    var entries = path.ENTRY_POINTS;
+
+    entries.map(function (entry) {
+        return browserify({
+            entries: [entry],
+            debug: true
+        })
+            //.transform(babelify)
+            .bundle()
+            .pipe(source(entry))
+            .pipe(rename(function (path) {
+                path.dirname = "";
+            }))
+            .pipe(gulp.dest('dist/js'));
+
+    });
+
+});
+
+gulp.task('semantic', function () {
+    gulp.src(path.SEMANTIC)
+        .pipe(gulp.dest(path.DEST + '/css/semantic'))
 });
 
 
-gulp.task('watch', function() {
-  gulp.watch(path.HTML, ['copy']);
-
-  var watcher  = watchify(browserify({
-    entries: [path.ENTRY_POINT],
-    transform: [reactify],
-    debug: true,
-    cache: {}, packageCache: {}, fullPaths: true
-  }));
-
-  return watcher.on('update', function () {
-    watcher.bundle()
-      .pipe(source(path.OUT))
-      .pipe(gulp.dest(path.DEST_SRC))
-      console.log('Updated');
-  })
-    .bundle()
-    .pipe(source(path.OUT))
-    .pipe(gulp.dest(path.DEST_SRC));
+gulp.task('browsersync', function () {
+    browserSync.init({
+        port: 8000
+    });
 });
 
 
-gulp.task('build', function(){
-  browserify({
-    entries: [path.ENTRY_POINT],
-    transform: [reactify],
-  })
-    .bundle()
-    .pipe(source(path.MINIFIED_OUT))
-    .pipe(streamify(uglify(path.MINIFIED_OUT)))
-    .pipe(gulp.dest(path.DEST_BUILD));
+gulp.task('watch', function () {
+    gulp.watch([path.HTML, path.CSS, path.JS], ['html', 'css', 'semantic', 'js']);
 });
 
-gulp.task('replaceHTML', function(){
-  gulp.src(path.HTML)
-    .pipe(htmlreplace({
-      'js': 'build/' + path.MINIFIED_OUT
-    }))
-    .pipe(gulp.dest(path.DEST));
-});
 
-gulp.task('production', ['build-semantic', 'replaceHTML', 'build']);
+gulp.task('build', ['build-semantic', 'html', 'css', 'js', 'semantic']);
 
 gulp.task('default', ['watch-semantic', 'watch']);

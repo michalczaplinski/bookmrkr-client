@@ -1,15 +1,15 @@
-		<!DOCTYPE html>
+<!DOCTYPE html>
+{% load staticfiles %}
 <html>
 <head>
-	<title> React test </title>
-	<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
-	<script src="../src/semantic/dist/semantic.js"></script>
-	<!-- <link rel="stylesheet" type="text/css" href="../src/semantic/dist/semantic.css"> -->
-	<!-- <link rel="stylesheet" type="text/css" href="../src/css/style.css"> -->
-	<link rel="stylesheet" type="text/css" href="../dist/uncssed_stylesheet.css">
+	<title> Bookmrkr </title>
+    <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="{% static "js/app.js" %}"></script>
+	<script src="{% static "css/semantic/dist/semantic.js" %}"></script>
+	<link rel="stylesheet" type="text/css" href="{% static "css/semantic/dist/semantic.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
 </head>
 <body>
-
 
 <div class="ui left labeled vertical sidebar menu">
 
@@ -21,7 +21,7 @@
 
 	<div class="link item">
 		<i class="bookmark icon large"></i>
-		All bookmarks
+		All the bookmarks
 	</div>
 
 	<div class="link item">
@@ -39,7 +39,7 @@
 		Settings
 	</div>
 
-	<div class="link item last parent">
+	<div class="link item last parent" id="logout">
 		<i class="log out icon large"></i>
 		Logout
 	</div>
@@ -78,7 +78,7 @@
 			<div class="item bookmark">
 				<div class="ui segment">
 			    <div class="ui image floated left ">
-			      <img src="../dist/img/test_image.jpg" height="80" width="80">
+			      <img src="{% static "img/test_image.jpg" %}" height="80" width="80">
 			    </div>
 			    <div class="content">
 				    <div class="ui right floated small compact basic icon buttons iconbar">
@@ -107,7 +107,7 @@
 		  <div class="item bookmark">
 		  	<div class="ui segment">
 			    <div class="ui left floated image">
-			      <img src="../dist/img/test_image.jpg" height="80" width="80">
+			      <img src="{% static "img/test_image.jpg" %}" height="80" width="80">
 			    </div>
 			    <div class="content">
 				    <div class="ui right floated small compact basic icon buttons iconbar">
@@ -133,7 +133,7 @@
 		  <div class="item bookmark">
 			  <div class="ui segment">
 			    <div class="ui left floated image">
-			    	<img src="../dist/img/test_image.jpg" height="80" width="80">
+			    	<img src="{% static "img/test_image.jpg" %}" height="80" width="80">
 			  	</div>
 			    <div class="content">
 				    <div class="ui right floated small compact basic icon buttons iconbar">
@@ -154,7 +154,7 @@
 		  <div class="item bookmark">
 			  <div class="ui segment">
 			    <div class="ui left floated image">
-			    	<img src="../dist/img/test_image.jpg" height="80" width="80">
+			    	<img src="{% static "img/test_image.jpg" %}" height="80" width="80">
 			  	</div>
 			    <div class="content">
 				    <div class="ui right floated small compact basic icon buttons iconbar">
@@ -175,7 +175,7 @@
 			<div class="item bookmark">
 			  <div class="ui segment">
 			    <div class="ui left floated image">
-			    	<img src="../dist/img/test_image.jpg" height="80" width="80">
+			    	<img src="{% static "img/test_image.jpg" %}" height="80" width="80">
 			  	</div>
 			    <div class="content">
 				    <div class="ui right floated small compact basic icon buttons iconbar">
@@ -204,7 +204,7 @@
 </div>
 
 
-<div class="ui modal">
+<div class="ui modal small options">
   <i class="close icon"></i>
   <div class="header">
     Settings
@@ -232,11 +232,5 @@
   </div>
 </div>
 
-
-
 </body>
 </html>
-
-<!-- build:js -->
-<script src="src/build.js" ></script>
-<!-- endbuild -->
