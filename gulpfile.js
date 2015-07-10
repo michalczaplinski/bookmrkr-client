@@ -64,7 +64,7 @@ gulp.task('js', function () {
             entries: [entry],
             debug: true
         })
-            //.transform(babelify)
+            .transform(babelify)
             .bundle()
             .pipe(source(entry))
             .pipe(rename(function (path) {
