@@ -39,6 +39,7 @@
     "purify-css": "^1.0.17",
     "react": "^0.13.3",
     "reactify": "^1.1.1",
+    "redux": "^0.12.0",
     "require-dot-file": "^0.4.0",
     "semantic-ui": "^1.12.3",
     "vinyl-source-stream": "^1.1.0",

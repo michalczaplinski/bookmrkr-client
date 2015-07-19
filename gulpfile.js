@@ -82,11 +82,11 @@ gulp.task('semantic', function () {
 });
 
 
-gulp.task('browsersync', function () {
-    browserSync.init({
-        port: 8000
-    });
-});
+//gulp.task('browsersync', function () {
+//    browserSync.init({
+//        port: 8000
+//    });
+//});
 
 
 gulp.task('watch', function () {
