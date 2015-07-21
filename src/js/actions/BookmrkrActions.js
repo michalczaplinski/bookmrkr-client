@@ -21,7 +21,7 @@ function hideSidebar() {
 
 export function toggleSidebar() {
     return (dispatch, getState) => {
-        const { AppState } = getState();
-        AppState.sidebar_shown ? dispatch(hideSidebar()) : dispatch(showSidebar());
+        const { appState } = getState();
+        appState.sidebar_shown ? dispatch(hideSidebar()) : dispatch(showSidebar());
     };
 }

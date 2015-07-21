@@ -19,9 +19,9 @@ var BookmrkrApp = React.createClass({
         const actions = bindActionCreators(BookmrkrActions, dispatch);
         return (
             <div>
-                <Sidebar actions={actions.toggleSidebar} appState={appState} />
+                <Sidebar appState={appState} />
                 <div className="pusher">
-                    <TopMenu toggleSidebar={actions.toggleSidebar} appState={appState}/>
+                    <TopMenu toggleSidebar={actions.toggleSidebar} />
                     <Grid />
                 </div>
             </div>

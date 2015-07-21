@@ -8,10 +8,10 @@ export default function bookmarks(state = initialState, action) {
     switch (action.type) {
 
         case SHOW_SIDEBAR:
-            return state.sidebar_shown = true;
+            return [{ sidebar_shown: true}, ...state];
 
         case HIDE_SIDEBAR:
-            return state.sidebar_shown = false;
+            return [{ sidebar_shown: false}, ...state];
 
         default:
             return state;
