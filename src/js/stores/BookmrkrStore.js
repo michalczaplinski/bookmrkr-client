@@ -1,19 +1,31 @@
-import {SHOW_SIDEBAR, HIDE_SIDEBAR } from '../constants/ActionTypes';
+var alt = require('../alt');
+var BookmrkrActions = require('../actions/BookmrkrActions');
 
-const initialState = [{
-    sidebar_shown: false
-}];
+var BookmrkrStore = alt.createStore(class BookmrkrStore {
+    constructor() {
+        this.bindActions(BookmrkrActions);
 
-export default function bookmarks(state = initialState, action) {
-    switch (action.type) {
+        this.sidebarShown = false;
+        this.settingsShown = false;
 
-        case SHOW_SIDEBAR:
-            return [{ sidebar_shown: true}, ...state];
-
-        case HIDE_SIDEBAR:
-            return [{ sidebar_shown: false}, ...state];
-
-        default:
-            return state;
     }
-}
+
+    onShowSidebar() {
+        this.sidebarShown = true;
+    }
+
+    onHideSidebar() {
+        this.sidebarShown = false;
+    }
+
+    onShowSettings() {
+        this.settingsShown = true;
+    }
+
+    onHideSettings() {
+        this.settingsShown = false;
+    }
+
+});
+
+module.exports = BookmrkrStore;

@@ -6,10 +6,10 @@ var Bookmark = React.createClass( {
     render: function() {
         return (
             <div className="item bookmark">
-                <div className="ui segment">
+                <div className="ui centered container segment">
 
                     <div className="ui image floated left ">
-                        <img src="/static/img/test_image.jpg" height="80" width="80"/>
+                        <img src="/static/dist/img/test_image.jpg" height="80" width="80"/>
                     </div>
 
                     <div className="content">

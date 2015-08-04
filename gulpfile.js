@@ -26,22 +26,14 @@ glob = require('glob');
 es = require('event-stream');
 browserSync = require('browser-sync').create();
 
-
 //var streamify = require('gulp-streamify');
 //var reactify = require('reactify');
 //var watchify = require('watchify');
-
-var build_semantic = require('./src/semantic/tasks/build');
-var watch_semantic = require('./src/semantic/tasks/watch');
-
-gulp.task('watch-semantic', watch_semantic);
-gulp.task('build-semantic', build_semantic);
 
 var path = {
     HTML: 'src/html/**/*.html',
     CSS: 'src/css/**/*.css',
     JS: 'src/js/**/*.js',
-    SEMANTIC: 'src/semantic/**',
     DEST: 'dist',
     ENTRY_POINTS: ['./src/js/app.js', './src/js/index.js']
 };
@@ -76,12 +68,6 @@ gulp.task('js', function () {
 
 });
 
-gulp.task('semantic', function () {
-    gulp.src(path.SEMANTIC)
-        .pipe(gulp.dest(path.DEST + '/css/semantic'))
-});
-
-
 //gulp.task('browsersync', function () {
 //    browserSync.init({
 //        port: 8000
@@ -90,10 +76,10 @@ gulp.task('semantic', function () {
 
 
 gulp.task('watch', function () {
-    gulp.watch([path.HTML, path.CSS, path.JS], ['html', 'css', 'semantic', 'js']);
+    gulp.watch([path.HTML, path.CSS, path.JS], ['html', 'css', 'js']);
 });
 
 
-gulp.task('build', ['build-semantic', 'html', 'css', 'js', 'semantic']);
+gulp.task('build', ['html', 'css', 'js']);
 
-gulp.task('default', ['watch-semantic', 'watch']);
+gulp.task('default', ['watch']);

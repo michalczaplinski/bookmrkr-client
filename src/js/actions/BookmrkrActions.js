@@ -1,27 +1,14 @@
-import * as types from '../constants/ActionTypes';
+var alt = require('../alt');
 
-//export function addBookmark(text) {
-//    return {
-//        type: types.ADD_BOOKMARK,
-//        text
-//    };
-//}
-
-function showSidebar() {
-    return {
-        type: types.SHOW_SIDEBAR
-    };
+class TodoActions {
+    constructor() {
+        this.generateActions(
+            'showSidebar',
+            'hideSidebar',
+            'showSettings',
+            'hideSettings'
+        )
+    }
 }
 
-function hideSidebar() {
-    return {
-        type: types.HIDE_SIDEBAR
-    };
-}
-
-export function toggleSidebar() {
-    return (dispatch, getState) => {
-        const { appState } = getState();
-        appState.sidebar_shown ? dispatch(hideSidebar()) : dispatch(showSidebar());
-    };
-}
+module.exports = alt.createActions(TodoActions);

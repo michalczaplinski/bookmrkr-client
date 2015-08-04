@@ -1,14 +1,15 @@
 var React = require('react');
-//var $ = require('../../../node_modules/jquery/dist/jquery');
-require('../../semantic/dist/semantic.js');
+require('../../../node_modules/semantic-ui-css/semantic.js');
 
 var Sidebar = React.createClass({
 
-    componentDidMount: function () {
-        const { appState } = this.props;
-        var self = React.findDOMNode(this.refs.sidebar);
+    propTypes: {
+        sidebarShown: React.PropTypes.bool.isRequired
+    },
 
-        appState.sidebar_shown ? $(self).sidebar('show') : $(self).sidebar('hide');
+    componentDidUpdate: function () {
+        var self = React.findDOMNode(this.refs.sidebar);
+        this.props.sidebarShown ? $(self).sidebar('show') : $(self).sidebar('hide');
     },
 
     render: function () {

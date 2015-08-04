@@ -6,7 +6,7 @@ var Grid = React.createClass( {
 
     render: function() {
         return  (
-            <div className="ui stackable page grid">
+            <div className="ui grid container">
                 <div className="twelve wide column centered">
                     <BookmarkList/>
                     <BookmarkAdder/>

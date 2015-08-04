@@ -1,5 +1,5 @@
 var React = require('react');
-var App = require('./containers/App');
+var BookmrkrApp = require('./components/BookmrkrApp');
 
 //require('../semantic/dist/semantic');
 //var $ = require('../../node_modules/jquery');
@@ -28,7 +28,9 @@ var App = require('./containers/App');
 //});
 //
 
+var content = document.getElementById('content');
+
 React.render(
-    <App />,
-    document.getElementById("content")
+    <BookmrkrApp/>,
+    content
 );

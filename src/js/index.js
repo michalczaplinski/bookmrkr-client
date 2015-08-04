@@ -3,7 +3,7 @@ require('./ajax.js');
 
 $(document).ready( function() {
 
-    $('.ui.button.login').on('click', function () {
+    $('.loginbutton').on('click', function () {
         $('.ui.modal.login').modal('show');
     });
 
@@ -13,10 +13,10 @@ $(document).ready( function() {
 
         var login = $.post("/api/auth/login/", {"username": username, "password": password})
             .done(function () {
-                window.location.replace('api/bookmarks/');
+                window.location.replace('/bookmarks');
             })
             .fail(function () {
-                alert('login unsuccessful');
+                alert('login unsuccessful' + username.toString() + password.toString());
             });
     });
 });
