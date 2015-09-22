@@ -4,6 +4,7 @@ import alt from '../alt';
 import Sidebar from '../components/Sidebar';
 import TopMenu from '../components/TopMenu';
 import Grid from '../components/Grid';
+import Settings from '../components/Settings';
 
 import BookmrkrStore from '../stores/BookmrkrStore';
 import { hideSidebar } from '../actions/BookmrkrActions';
@@ -44,6 +45,7 @@ var BookmrkrApp = React.createClass({
                     <TopMenu sidebarShown={this.state.sidebarShown} settingsShown={this.state.settingsShown}/>
                     <Grid/>
                 </div>
+                <Settings settingsShown={this.state.settingsShown}/>
             </body>
         );
     },

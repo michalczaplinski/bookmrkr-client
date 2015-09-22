@@ -1,12 +1,20 @@
 var React = require('react');
 require('../../../node_modules/semantic-ui-css/semantic.js');
 
+import { showSettings } from '../actions/BookmrkrActions.js'
+
 var Sidebar = React.createClass({
 
     propTypes: {
         sidebarShown: React.PropTypes.bool.isRequired
     },
 
+    _openSettings: function() {
+        if (!this.props.settingsShown) {
+            showSettings();
+        }
+    },
+    
     componentDidUpdate: function () {
         var self = React.findDOMNode(this.refs.sidebar);
         this.props.sidebarShown ? $(self).sidebar('show') : $(self).sidebar('hide');
@@ -36,7 +44,7 @@ var Sidebar = React.createClass({
                     Trash
                 </div>
 
-                <div className="link item">
+                <div className="link item" onClick={this._openSettings}>
                     <i className="options icon large"></i>
                     Settings
                 </div>
