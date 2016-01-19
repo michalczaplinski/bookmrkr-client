@@ -1,4 +1,5 @@
 var React = require('react');
+var ReactDOM = require('react-dom');
 var BookmrkrApp = require('./components/BookmrkrApp');
 
 //require('../semantic/dist/semantic');
@@ -30,7 +31,7 @@ var BookmrkrApp = require('./components/BookmrkrApp');
 
 var content = document.getElementById('content');
 
-React.render(
+ReactDOM.render(
     <BookmrkrApp/>,
     content
 );
