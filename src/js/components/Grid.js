@@ -8,7 +8,7 @@ var Grid = React.createClass( {
         return  (
             <div className="ui grid container">
                 <div className="twelve wide column centered">
-                    <BookmarkList/>
+                    <BookmarkList source="/api/bookmarks"/>
                     <BookmarkAdder/>
                 </div>
             </div>
