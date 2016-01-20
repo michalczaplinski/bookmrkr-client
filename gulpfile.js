@@ -68,15 +68,15 @@ gulp.task('js', function () {
 
 });
 
-//gulp.task('browsersync', function () {
-//    browserSync.init({
-//        port: 8000
-//    });
-//});
+gulp.task('browsersync', function () {
+   browserSync.init({
+       port: 8000
+   });
+});
 
 
 gulp.task('watch', function () {
-    gulp.watch([path.HTML, path.CSS, path.JS], ['html', 'css', 'js']);
+    gulp.watch([path.HTML, path.CSS, path.JS], ['html', 'css', 'js', ]);
 });
 
 
