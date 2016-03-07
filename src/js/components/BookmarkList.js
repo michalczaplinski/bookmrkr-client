@@ -5,7 +5,7 @@ var BookmarkList = React.createClass( {
 
   renderBookmark: function(data) {
     return (
-        <Bookmark data={data}/>
+        <Bookmark key={data.id} data={data}/>
     );
   },
 

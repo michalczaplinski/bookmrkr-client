@@ -21,7 +21,7 @@ var BookmrkrApp = React.createClass({
 
     getInitialState: function() {
 
-        var initialState = BookmrkrStore.getState()
+        var initialState = BookmrkrStore.getState();
 
         return {
             sidebarShown: initialState.sidebarShown,

@@ -47,7 +47,7 @@ $(document).ready( function() {
 
         var login = $.post("api/auth/login/", {"username": username, "password": password})
             .done(function (data) {
-                document.cookie = 'bookmrkr_token=' + data + '; domain=localhost:8000;expires=Fri, 3 Aug 2001 20:47:11 UTC; path=/'
+                document.cookie = 'csrftoken=' + data + '; domain=localhost:8000;expires=Fri, 3 Aug 2001 20:47:11 UTC; path=/';
                 window.location.assign('/bookmarks');
                 console.log(data);
             })
