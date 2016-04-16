@@ -24,7 +24,7 @@ babelify = require('babelify');
 rename = require('gulp-rename');
 glob = require('glob');
 es = require('event-stream');
-browserSync = require('browser-sync').create();
+//browserSync = require('browser-sync').create();
 
 //var streamify = require('gulp-streamify');
 //var reactify = require('reactify');
@@ -68,11 +68,11 @@ gulp.task('js', function () {
 
 });
 
-gulp.task('browsersync', function () {
-   browserSync.init({
-       port: 8000
-   });
-});
+//gulp.task('browsersync', function () {
+//   browserSync.init({
+//       port: 8000
+//   });
+//});
 
 
 gulp.task('watch', function () {
