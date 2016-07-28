@@ -2,9 +2,12 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../../actions';
+
 import Sidebar from './../../components/Sidebar/Sidebar';
 import TopBar from './../../components/TopBar/TopBar';
 import BookmarkList from './../../components/BookmarkList/BookmarkList';
+import BookmarkAdder from '../../components/BookmarkAdder/BookmarkAdder';
+
 import CSSModules from 'react-css-modules';
 import styles from './style.css';
 
@@ -21,7 +24,8 @@ class BookmrkrApp extends Component {
         <Sidebar/>
         <TopBar/>
         <div styleName="content-container">
-          <BookmarkList/>
+          <BookmarkList bookmarks={this.props.bookmarks}/>
+          <BookmarkAdder/>
         </div>
       </div>
     )

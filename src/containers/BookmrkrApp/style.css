@@ -5,6 +5,7 @@
 
 .content-container {
   margin-top: 60px;  /* should be a global so we can control topbar height */
+  margin-left: 100px;  /* should be a global so we can control sidebar width */
   display: flex;
   flex-direction: column;
   height: 100%;

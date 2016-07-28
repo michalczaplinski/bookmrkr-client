@@ -4,9 +4,9 @@ import styles from './style.css';
 
 const BookmarkAdder = () => {
   return (
-    <div>
-      bookmark adder
-    </div>
+    <a styleName="adder" href="#">
+      +
+    </a>
   )
 };
 

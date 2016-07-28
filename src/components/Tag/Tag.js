@@ -2,11 +2,11 @@ import React, { Component, PropTypes } from 'react';
 import CSSModules from 'react-css-modules';
 import styles from './style.css';
 
-const Tag = () => {
+const Tag = ({name}) => {
   return (
-    <div>
-      tag
-    </div>
+    <a styleName="tag" href="#">
+      {name}
+    </a>
   )
 };
 

@@ -6,4 +6,6 @@
 
   background-color:yellow;
   text-align: center;  /* at least for now */
+
+  z-index: 10;
 }

@@ -11,11 +11,21 @@ class BookmarkList extends Component {
     this.props = props;
   }
 
+  _renderBookmark(bookmark) {
+    return (
+      <Bookmark key={bookmark.id}
+                cover={bookmark.cover}
+                title={bookmark.title}
+                description={bookmark.description}
+                tags={bookmark.tags}>
+      </Bookmark>
+    )
+  }
+
   render() {
     return (
       <div styleName="content">
-        <Bookmark/>
-
+        {this.props.bookmarks.map(this._renderBookmark)}
       </div>
     );
   }

@@ -9,9 +9,13 @@ import 'whatwg-fetch';
 
 import BookmrkrApp from './containers/BookmrkrApp/BookmrkrApp';
 import configureStore from './store/configureStore';
+import { initialDataLoaded, initialDataLoadingFailed, initialDataError } from './actions';
+
+import GLOBALS from './globals';
 
 // sanitize.css (CSS reset)
 import style from '../node_modules/sanitize.css/sanitize.css';
+
 
 // initial state
 const store = configureStore({
@@ -20,20 +24,26 @@ const store = configureStore({
   }
 });
 
-let api_path = __DEV__
-  ? 'http://json-server-bookmrkr.dev/bookmarks'
-  : 'production_path';
 
-fetch(api_path, {credentials: 'include'} ).then(response => {
+fetch(GLOBALS.api_path, {credentials: 'include'}).then(response => {
   if (response.status >= 200 && response.status < 300) {
     return response.json();
-  } else {
-    // handle the network error
+  } else if (response.status == 403) {
+    console.log('403');
+    window.location.replace('http://bookmrkr-website.dev');  //TODO: update the URL.
   }
+  throw new Error(response.status);
 }).then(json => {
-  store.dispatch(/* the action */);
+  store.dispatch(initialDataLoaded(json));
+  // render the application root
+  render(
+    <Provider store={store}>
+      <Router history={browserHistory} routes={routes} />
+    </Provider>, document.getElementById('app')
+  );
 }).catch(error => {
-  // handle the request failure somehow;
+  console.log(error);
+  store.dispatch(initialDataError(error));
 });
 
 
@@ -54,9 +64,3 @@ const routes = (
   </Route>
 );
 
-// render the application root
-render(
-  <Provider store={store}>
-    <Router history={browserHistory} routes={routes} />
-  </Provider>, document.getElementById('app')
-);

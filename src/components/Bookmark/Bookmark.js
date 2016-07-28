@@ -3,6 +3,7 @@ import CSSModules from 'react-css-modules';
 import styles from './style.css';
 
 import Tag from '../Tag/Tag';
+import GLOBALS from '../../globals';
 
 class Bookmark extends Component {
 
@@ -11,28 +12,30 @@ class Bookmark extends Component {
     this.props = props;
   }
 
-  _renderTag() {
+  _renderTag(tag) {
     return (
-      <Tag>
-      </Tag>
+      <Tag key={tag.id} name={tag.name}/>
     )
   }
 
   render() {
+
+    let coverUrl = `${GLOBALS.image_server_path}/78x78`;
+
     return (
       <div styleName="bookmark">
-        <div styleName="image-container">
-          <img src="" alt=""/>
-        </div>
+        <a styleName="image-container" href="#">
+          <img src={coverUrl} alt="" height="78" width="78"/>
+        </a>
         <div styleName="content-container">
           <div styleName="header">
-            header
+            <b>{this.props.title}</b>
           </div>
           <div styleName="description">
-            descriptsion
+            {this.props.description}
           </div>
           <div styleName="tags-container">
-            {this._renderTag()}
+            {this.props.tags.map(this._renderTag)}
           </div>
         </div>
       </div>

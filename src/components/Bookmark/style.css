@@ -1,16 +1,28 @@
 .bookmark {
   border: solid 1px black;
+  position: relative;
   height: 90px;
   margin-bottom: 15px;
   width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
-.image-container {}
+.image-container {
+  padding: 5px;
+}
 
-.content-container {}
+.content-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
 
 .header {}
 
 .description {}
 
-.tags-container {}
+.tags-container {
+  display: flex;
+  flex-direction: row;
+}

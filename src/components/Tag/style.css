@@ -1,0 +1,13 @@
+.tag {
+  border: dashed 1px black;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-right: 5px;
+  font-size: 13px;
+  background: lightskyblue;
+}
+
+a.tag {
+  text-decoration: none;
+  color: inherit;
+}
