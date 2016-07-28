@@ -1,0 +1,13 @@
+.app {
+  display: flex;
+  flex-direction: row;
+}
+
+.content-container {
+  margin-top: 60px;  /* should be a global so we can control topbar height */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}

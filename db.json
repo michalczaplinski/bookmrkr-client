@@ -1,0 +1,219 @@
+{
+  "bookmarks": [
+    {
+      "id": 90,
+      "url": "http://test.bookmark32e12354.com",
+      "title": "4324rew32142",
+      "description": "test bookmark 1 description",
+      "content": "",
+      "cover": null,
+      "date_created": "2016-02-24T00:08:29.093735Z",
+      "date_updated": "2016-02-24T00:08:29.093848Z",
+      "owner": "test",
+      "tags": [
+        {
+          "id": 43,
+          "name": "laallalalalla",
+          "owner": "test"
+        }
+      ],
+      "is_trashed": false,
+      "domain": "bookmark1.com"
+    },
+    {
+      "id": 89,
+      "url": "http://test.bookmark12353124.com",
+      "title": "43432432142",
+      "description": "test bookmark 1 description",
+      "content": "",
+      "cover": null,
+      "date_created": "2016-02-24T00:06:26.536837Z",
+      "date_updated": "2016-02-24T00:06:26.536951Z",
+      "owner": "test",
+      "tags": [],
+      "is_trashed": false,
+      "domain": "bookmark1.com"
+    },
+    {
+      "id": 88,
+      "url": "http://test.bookmark12354.com",
+      "title": "432432142",
+      "description": "test bookmark 1 description",
+      "content": "",
+      "cover": null,
+      "date_created": "2016-02-24T00:04:26.188869Z",
+      "date_updated": "2016-02-24T00:04:26.189000Z",
+      "owner": "test",
+      "tags": [],
+      "is_trashed": false,
+      "domain": "bookmark1.com"
+    },
+    {
+      "id": 87,
+      "url": "http://test.bookmark1234.com",
+      "title": "rew312qr",
+      "description": "test bookmark 1 description",
+      "content": "",
+      "cover": null,
+      "date_created": "2016-02-24T00:03:41.454859Z",
+      "date_updated": "2016-02-24T00:03:41.454972Z",
+      "owner": "test",
+      "tags": [],
+      "is_trashed": false,
+      "domain": "bookmark1.com"
+    },
+    {
+      "id": 86,
+      "url": "http://65437yhg.com",
+      "title": "creating2",
+      "description": "",
+      "content": "",
+      "cover": null,
+      "date_created": "2016-02-23T23:31:52.352746Z",
+      "date_updated": "2016-02-23T23:31:52.352893Z",
+      "owner": "test",
+      "tags": [],
+      "is_trashed": false,
+      "domain": "test.com"
+    },
+    {
+      "id": 85,
+      "url": "http://test.creating2.com",
+      "title": "creating2",
+      "description": "",
+      "content": "",
+      "cover": null,
+      "date_created": "2016-02-23T23:21:30.245728Z",
+      "date_updated": "2016-02-23T23:21:30.245849Z",
+      "owner": "test",
+      "tags": [],
+      "is_trashed": false,
+      "domain": "test.com"
+    },
+    {
+      "id": 84,
+      "url": "http://test.creating.com",
+      "title": "creating",
+      "description": "test bookmark 3",
+      "content": "test test test 3",
+      "cover": null,
+      "date_created": "2016-02-23T23:17:18.415820Z",
+      "date_updated": "2016-02-23T23:17:18.415861Z",
+      "owner": "test",
+      "tags": [],
+      "is_trashed": false,
+      "domain": "test.com"
+    },
+    {
+      "id": 83,
+      "url": "http://www.test.com",
+      "title": "fuireowpqgnfsd",
+      "description": "",
+      "content": "",
+      "cover": null,
+      "date_created": "2016-02-23T23:12:15.450769Z",
+      "date_updated": "2016-02-23T23:12:15.450798Z",
+      "owner": "test",
+      "tags": [],
+      "is_trashed": false,
+      "domain": ""
+    },
+    {
+      "id": 82,
+      "url": "http://test.bookmark1.com",
+      "title": "test bookmark 1",
+      "description": "test bookmark 1 description",
+      "content": "",
+      "cover": "/media/newlogo_RaU6iYr.png",
+      "date_created": "2016-02-20T17:55:20.126462Z",
+      "date_updated": "2016-02-20T17:55:20.126487Z",
+      "owner": "test",
+      "tags": [],
+      "is_trashed": false,
+      "domain": "bookmark1.com"
+    },
+    {
+      "id": 81,
+      "url": "http://test.bookmark3.com",
+      "title": "test bookmark 3",
+      "description": "test bookmark 3",
+      "content": "test test test 3",
+      "cover": "/media/Hikikomori_Guide_to_Berlin_n3MPZKD.png",
+      "date_created": "2016-02-20T17:50:37.164003Z",
+      "date_updated": "2016-02-20T17:50:37.164032Z",
+      "owner": "test",
+      "tags": [
+        {
+          "id": 35,
+          "name": "test tag 1",
+          "owner": "test"
+        },
+        {
+          "id": 36,
+          "name": "test tag 2",
+          "owner": "test"
+        }
+      ],
+      "is_trashed": false,
+      "domain": "bookmark3.com"
+    },
+    {
+      "id": 80,
+      "url": "http://test.bookmark2.com",
+      "title": "test bookmark 2",
+      "description": "test bookmark 2",
+      "content": "test test test",
+      "cover": "/media/killme.jpg",
+      "date_created": "2016-02-20T17:49:43.376364Z",
+      "date_updated": "2016-02-20T17:49:43.376394Z",
+      "owner": "test",
+      "tags": [
+        {
+          "id": 35,
+          "name": "test tag 1",
+          "owner": "test"
+        }
+      ],
+      "is_trashed": false,
+      "domain": "bookmark2.com"
+    }
+  ],
+
+  "tags": [
+    {
+      "id": 41,
+      "name": "gfsfdsa",
+      "owner": "test"
+    },
+    {
+      "id": 43,
+      "name": "laallalalalla",
+      "owner": "test"
+    },
+    {
+      "id": 44,
+      "name": "newTag2",
+      "owner": "test"
+    },
+    {
+      "id": 46,
+      "name": "newwwwwwwwwwwww",
+      "owner": "test"
+    },
+    {
+      "id": 45,
+      "name": "test new tag",
+      "owner": "test"
+    },
+    {
+      "id": 35,
+      "name": "test tag 1",
+      "owner": "test"
+    },
+    {
+      "id": 36,
+      "name": "test tag 2",
+      "owner": "test"
+    }
+  ]
+}

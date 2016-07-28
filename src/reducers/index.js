@@ -5,7 +5,7 @@ import objectAssign from 'object-assign';
 import * as types from '../actions/actionTypes';
 
 
-function sidebar(state={}, action) {
+export function sidebar(state={}, action) {
   switch (action.type) {
 
     case types.CLOSE_SIDEBAR:

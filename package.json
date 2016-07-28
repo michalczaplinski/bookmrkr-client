@@ -1,5 +1,5 @@
 {
-  "name": "atm-number26",
+  "name": "pegg",
   "version": "0.1.0",
   "description": "",
   "engines": {
@@ -31,12 +31,14 @@
   "dependencies": {
     "object-assign": "4.1.0",
     "react": "15.2.0",
-    "react-burger-menu": "1.9.9",
+    "react-css-modules": "3.7.8",
     "react-dom": "15.2.0",
     "react-redux": "4.4.5",
     "react-router": "2.5.2",
     "react-router-redux": "4.0.5",
-    "redux": "3.5.2"
+    "redux": "3.5.2",
+    "sanitize.css": "4.1.0",
+    "whatwg-fetch": "1.0.0"
   },
   "devDependencies": {
     "babel-cli": "6.10.1",

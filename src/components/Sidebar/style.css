@@ -1,0 +1,10 @@
+.sidebar {
+  position: fixed;
+  background-color: #e6c3c7;
+  height: inherit;
+  width: 100px;
+  min-height: 100%;
+  min-width: 100px;
+  z-index: 1;
+}
+
