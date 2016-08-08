@@ -1,173 +1,176 @@
 {
   "bookmarks": [
     {
-      "id": 89,
-      "url": "http://test.bookmark12353124.com",
-      "title": "43432432142",
-      "description": "test bookmark 1 description",
-      "content": "",
-      "cover": null,
-      "date_created": "2016-02-24T00:06:26.536837Z",
-      "date_updated": "2016-02-24T00:06:26.536951Z",
-      "owner": "test",
-      "tags": [],
-      "is_trashed": false,
-      "domain": "bookmark1.com"
-    },
-    {
-      "id": 88,
-      "url": "http://test.bookmark12354.com",
-      "title": "432432142",
-      "description": "test bookmark 1 description",
-      "content": "",
-      "cover": null,
-      "date_created": "2016-02-24T00:04:26.188869Z",
-      "date_updated": "2016-02-24T00:04:26.189000Z",
-      "owner": "test",
-      "tags": [],
-      "is_trashed": false,
-      "domain": "bookmark1.com"
-    },
-    {
-      "id": 87,
-      "url": "http://test.bookmark1234.com",
-      "title": "rew312qr",
-      "description": "test bookmark 1 description",
-      "content": "",
-      "cover": null,
-      "date_created": "2016-02-24T00:03:41.454859Z",
-      "date_updated": "2016-02-24T00:03:41.454972Z",
-      "owner": "test",
-      "tags": [],
-      "is_trashed": false,
-      "domain": "bookmark1.com"
-    },
-    {
-      "id": 86,
-      "url": "http://65437yhg.com",
-      "title": "creating2",
-      "description": "",
-      "content": "",
-      "cover": null,
-      "date_created": "2016-02-23T23:31:52.352746Z",
-      "date_updated": "2016-02-23T23:31:52.352893Z",
-      "owner": "test",
-      "tags": [],
-      "is_trashed": false,
-      "domain": "test.com"
-    },
-    {
-      "id": 85,
-      "url": "http://test.creating2.com",
-      "title": "creating2",
-      "description": "",
-      "content": "",
-      "cover": null,
-      "date_created": "2016-02-23T23:21:30.245728Z",
-      "date_updated": "2016-02-23T23:21:30.245849Z",
-      "owner": "test",
-      "tags": [],
-      "is_trashed": false,
-      "domain": "test.com"
-    },
-    {
-      "id": 84,
-      "url": "http://test.creating.com",
-      "title": "creating",
-      "description": "test bookmark 3",
-      "content": "test test test 3",
-      "cover": null,
-      "date_created": "2016-02-23T23:17:18.415820Z",
-      "date_updated": "2016-02-23T23:17:18.415861Z",
-      "owner": "test",
-      "tags": [],
-      "is_trashed": false,
-      "domain": "test.com"
-    },
-    {
-      "id": 83,
-      "url": "http://www.test.com",
-      "title": "fuireowpqgnfsd",
-      "description": "",
-      "content": "",
-      "cover": null,
-      "date_created": "2016-02-23T23:12:15.450769Z",
-      "date_updated": "2016-02-23T23:12:15.450798Z",
-      "owner": "test",
-      "tags": [],
-      "is_trashed": false,
-      "domain": ""
-    },
-    {
-      "id": 82,
-      "url": "http://test.bookmark1.com",
-      "title": "test bookmark 1",
-      "description": "test bookmark 1 description",
-      "content": "",
-      "cover": "/media/newlogo_RaU6iYr.png",
-      "date_created": "2016-02-20T17:55:20.126462Z",
-      "date_updated": "2016-02-20T17:55:20.126487Z",
-      "owner": "test",
-      "tags": [],
-      "is_trashed": false,
-      "domain": "bookmark1.com"
-    },
-    {
-      "id": 80,
-      "url": "http://test.bookmark2.com",
-      "title": "test bookmark 2",
-      "description": "test bookmark 2",
-      "content": "test test test",
-      "cover": "/media/killme.jpg",
-      "date_created": "2016-02-20T17:49:43.376364Z",
-      "date_updated": "2016-02-20T17:49:43.376394Z",
-      "owner": "test",
+      "id": 24,
+      "url": "http://ghhu.zld",
+      "title": "Rem aperiam illo ex",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nCorporis rerum accusamus optio quia tenetur, laboriosam quasi at totam nostrum qui, iusto at tenetur dolor corrupti recusandae, magnam asperiores atque id adipisci accusantium amet officiis cum error consequatur aperiam, veritatis fuga tenetur fugiat eum odio quo corporis consequuntur eligendi unde sint?\n\nIpsum doloremque dignissimos exercitationem enim consequuntur beatae ipsa inventore animi odio tempore. Architecto ad optio temporibus molestias cumque sit dolorem placeat cum hic.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nNon aliquid autem quam voluptas ad velit consequuntur commodi, eligendi at accusantium voluptatem provident ea temporibus rem porro odit dolorum.\n\nIllum quia excepturi incidunt eum veritatis, delectus laudantium aperiam inventore facilis sequi quod cupiditate similique temporibus non, consectetur at natus nam laboriosam fugit velit asperiores facilis, eligendi dolorem ducimus voluptate qui sit, vitae at soluta doloremque adipisci magnam est ex vero ipsam natus nulla? Deserunt ea laudantium quis eligendi modi dolorum amet necessitatibus quisquam, dolores qui veritatis aspernatur? Quod quia hic, ipsam doloremque obcaecati, consequuntur commodi velit dolorem eum deleniti vitae nulla nemo iste inventore architecto?",
+      "cover": "/media/_autofixture/400x600_5.png",
+      "date_created": "2016-08-06T16:46:22.510218Z",
+      "date_updated": "2016-08-06T16:46:22.510242Z",
+      "owner": "admin",
       "tags": [
         {
-          "id": 35,
-          "name": "test tag 1",
-          "owner": "test"
+          "id": 7,
+          "name": "Fugit vel at n",
+          "owner": "423UjW5uRkqeRtlV"
+        },
+        {
+          "id": 4,
+          "name": "Ipsum numquam",
+          "owner": "MYrCA_MWqjEfQVI"
+        },
+        {
+          "id": 6,
+          "name": "Quam dolor porro in dolo",
+          "owner": "nW6DCl6oG3IFqKaDd"
+        },
+        {
+          "id": 5,
+          "name": "Sed vel eius aspernat",
+          "owner": "admin"
+        },
+        {
+          "id": 2,
+          "name": "Temporibus harum po",
+          "owner": "i4j_TK4"
         }
       ],
       "is_trashed": false,
-      "domain": "bookmark2.com"
+      "domain": "Eum facere voluptat"
+    },
+    {
+      "id": 12,
+      "url": "http://ibwkfxbxyses.gao",
+      "title": "Laborum asperiores suscipit recusandae qui amet bla loremtego wlazl",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nEos saepe inventore beatae expedita nemo sed dolorem tempora reiciendis illum, reprehenderit dolores laudantium rerum, expedita voluptas aliquid debitis quod ad omnis esse, velit et voluptates laboriosam. Reprehenderit dolorem cumque quidem corporis perferendis provident aspernatur quis beatae, labore esse laborum dolor reprehenderit cum voluptates odit? Vel tenetur voluptatem possimus nihil ea vero, aut dicta iure nam nostrum exercitationem eveniet voluptatum non aperiam? Consequuntur a optio odio maiores modi hic voluptatem perspiciatis sequi dolor, rerum ea pariatur facere officiis.\n\nAspernatur facere hic deserunt deleniti facilis voluptatum non quidem nesciunt maiores, tempore dicta magnam inventore laudantium, voluptas nam omnis unde doloribus.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nPerspiciatis nesciunt alias molestiae aut amet ad aspernatur quibusdam animi accusamus maxime, quia consequuntur molestias veritatis eius laboriosam accusantium asperiores voluptatum, laudantium omnis dicta reiciendis perspiciatis numquam debitis tempore velit recusandae eveniet? Esse sint nulla, natus eveniet neque hic, rerum perferendis repellat nulla sunt quos ipsum illum sint iure. Dolorem perspiciatis quo, natus dignissimos mollitia sapiente iusto unde eligendi eum id, quas quae cum iusto tempore deleniti amet distinctio officiis?\n\nEx hic libero expedita, saepe maiores laborum dicta voluptas numquam ipsam nulla eos, odit quas minima fuga beatae id veritatis repellat voluptatem sunt?",
+      "cover": "/media/_autofixture/100x100_4.png",
+      "date_created": "2016-08-06T16:46:22.169624Z",
+      "date_updated": "2016-08-06T16:46:22.169648Z",
+      "owner": "admin",
+      "tags": [
+        {
+          "id": 1,
+          "name": "De",
+          "owner": "423UjW5uRkqeRtlV"
+        },
+        {
+          "id": 7,
+          "name": "Fugit vel at n",
+          "owner": "423UjW5uRkqeRtlV"
+        },
+        {
+          "id": 4,
+          "name": "Ipsum numquam",
+          "owner": "MYrCA_MWqjEfQVI"
+        }
+      ],
+      "is_trashed": false,
+      "domain": "Repell"
+    },
+    {
+      "id": 4,
+      "url": "http://jglce.kho",
+      "title": "Quod incidunt odio neque f",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nVero tenetur animi incidunt culpa vitae quisquam veritatis dicta et hic, sequi et cumque voluptas, tempora eaque beatae est atque mollitia incidunt nemo laboriosam deleniti? Nobis at ut sit eius quibusdam inventore voluptatem iusto, officiis rerum laborum nemo deserunt optio at pariatur non. Ipsa ratione asperiores dolor dolorem excepturi perspiciatis voluptatum, modi cumque vero tempore quod debitis doloribus dolore odio eligendi ut, rerum ab expedita corrupti eum pariatur illum quas. Odit natus nesciunt asperiores?\n\nVeritatis quod corrupti dicta excepturi doloremque voluptatibus quas voluptate quam ipsum fugit, atque dicta ratione obcaecati ab et, similique nihil ipsam asperiores laudantium voluptatibus corporis, obcaecati suscipit aliquid commodi eos itaque eveniet quas, sint accusamus illum id culpa deleniti eius commodi hic veniam cum.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLaudantium esse dignissimos libero eius accusantium a, incidunt perspiciatis distinctio iure. Ratione numquam deleniti unde quam debitis tempore consequuntur, rerum labore eos cum cupiditate corrupti. Iusto voluptatibus doloribus expedita hic, quos hic quis animi laborum. Voluptatem in obcaecati accusantium mollitia neque minus quae a dolores molestiae, blanditiis quis amet sequi, soluta magni earum beatae, assumenda pariatur est velit autem amet obcaecati eum quas ipsam eveniet, maxime libero iure tenetur sit reprehenderit?\n\nAut illum in dolor eius id cumque, odit optio voluptatem, nulla sapiente exercitationem rerum dolores porro voluptas commodi animi vitae similique, at aspernatur veniam pariatur eligendi accusantium maiores voluptatem, cum incidunt beatae architecto dignissimos eum deserunt rerum aut placeat repudiandae? Blanditiis soluta incidunt, voluptas ex quo non aliquam eligendi porro molestias, blanditiis expedita voluptatum eaque nobis esse minus quos impedit tempore, ipsam tempora fuga repellendus laudantium facere dolore cumque. Commodi vel culpa. Labore cum corporis enim sit nobis.",
+      "cover": "/media/_autofixture/100x100.png",
+      "date_created": "2016-08-06T16:46:21.951139Z",
+      "date_updated": "2016-08-06T16:46:21.951163Z",
+      "owner": "admin",
+      "tags": [
+        {
+          "id": 1,
+          "name": "De",
+          "owner": "423UjW5uRkqeRtlV"
+        },
+        {
+          "id": 3,
+          "name": "Iure vel natus eligendi",
+          "owner": "MYrCA_MWqjEfQVI"
+        },
+        {
+          "id": 6,
+          "name": "Quam dolor porro in dolo",
+          "owner": "nW6DCl6oG3IFqKaDd"
+        },
+        {
+          "id": 9,
+          "name": "Qui",
+          "owner": "admin"
+        }
+      ],
+      "is_trashed": false,
+      "domain": "Voluptas quasi maxim"
+    },
+    {
+      "id": 2,
+      "url": "http://mrblvv.lcz",
+      "title": "Modi id inventore fuga",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nEum nam recusandae inventore vero quos ea molestiae, nesciunt molestiae repellat asperiores mollitia blanditiis eos consequuntur? Autem nulla quidem quaerat aspernatur sequi officia quae optio hic, earum consequuntur vitae sit, itaque eligendi vero dolor fugiat fugit eos laboriosam molestias voluptates esse culpa. Blanditiis a in nihil earum possimus non?\n\nVel velit explicabo delectus, quam perferendis laudantium quas culpa. Commodi eaque accusamus tenetur, numquam quidem corrupti nostrum eos molestiae quod perspiciatis necessitatibus, ipsum consequuntur ipsa reprehenderit dicta id placeat laudantium quasi, porro quam atque qui iure ab adipisci ex velit corrupti recusandae. Fugit explicabo excepturi eius voluptatum commodi dolore expedita possimus, cum illum accusamus, temporibus vero maiores neque provident ducimus nostrum, quia earum incidunt minima necessitatibus quasi, quia commodi quae. Perspiciatis asperiores in dolores unde sunt alias, exercitationem voluptate officia explicabo earum doloribus accusantium tenetur qui ipsum vitae.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nAtque quam nulla a obcaecati necessitatibus labore cupiditate nisi enim, odit dolor explicabo eum harum sequi eos quia, velit enim temporibus tenetur. Fugiat labore reprehenderit pariatur vero unde debitis aut dolorem, modi sapiente aspernatur illum accusantium deserunt culpa inventore libero placeat, nulla dolorem ab officia provident vitae fugit rem, fuga autem obcaecati distinctio voluptatibus ut nemo nulla excepturi odit?\n\nMinus laborum cupiditate nisi ad culpa qui, pariatur eaque quae quibusdam excepturi explicabo quo nemo numquam ipsa sit blanditiis? Deleniti eaque repellat explicabo minus cupiditate neque ut, ut corporis corrupti, nulla obcaecati nesciunt veniam enim dolor? Molestias tempora perferendis odio in adipisci totam non fugiat, ad perferendis provident ab quia a cupiditate soluta harum aliquid aperiam. Facilis beatae velit corrupti nostrum reiciendis illum ea adipisci?",
+      "cover": "/media/_autofixture/200x300.png",
+      "date_created": "2016-08-06T16:46:21.927941Z",
+      "date_updated": "2016-08-06T16:46:21.927969Z",
+      "owner": "admin",
+      "tags": [
+        {
+          "id": 8,
+          "name": "Natus el",
+          "owner": "nW6DCl6oG3IFqKaDd"
+        }
+      ],
+      "is_trashed": false,
+      "domain": "Laudantium quod maiores quas corpo"
     }
   ],
   "tags": [
     {
-      "id": 41,
-      "name": "gfsfdsa",
-      "owner": "test"
+      "id": 1,
+      "name": "De",
+      "owner": "423UjW5uRkqeRtlV"
     },
     {
-      "id": 43,
-      "name": "laallalalalla",
-      "owner": "test"
+      "id": 2,
+      "name": "Temporibus harum po",
+      "owner": "i4j_TK4"
     },
     {
-      "id": 44,
-      "name": "newTag2",
-      "owner": "test"
+      "id": 3,
+      "name": "Iure vel natus eligendi",
+      "owner": "MYrCA_MWqjEfQVI"
     },
     {
-      "id": 46,
-      "name": "newwwwwwwwwwwww",
-      "owner": "test"
+      "id": 4,
+      "name": "Ipsum numquam",
+      "owner": "MYrCA_MWqjEfQVI"
     },
     {
-      "id": 45,
-      "name": "test new tag",
-      "owner": "test"
+      "id": 5,
+      "name": "Sed vel eius aspernat",
+      "owner": "admin"
     },
     {
-      "id": 35,
-      "name": "test tag 1",
-      "owner": "test"
+      "id": 6,
+      "name": "Quam dolor porro in dolo",
+      "owner": "nW6DCl6oG3IFqKaDd"
     },
     {
-      "id": 36,
-      "name": "test tag 2",
-      "owner": "test"
+      "id": 7,
+      "name": "Fugit vel at n",
+      "owner": "423UjW5uRkqeRtlV"
+    },
+    {
+      "id": 8,
+      "name": "Natus el",
+      "owner": "nW6DCl6oG3IFqKaDd"
+    },
+    {
+      "id": 9,
+      "name": "Qui",
+      "owner": "admin"
     }
   ]
 }

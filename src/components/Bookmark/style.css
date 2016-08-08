@@ -13,17 +13,31 @@
 }
 
 .content-container {
-  width: 100%;
+  width: 70%;
   display: flex;
   flex-flow: column nowrap;
   padding: 5px;
 }
 
-.header {}
+.header {
+  height: 25%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
 
-.description {}
+.description {
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+}
 
 .tags-container {
+  height: 25%;
   display: flex;
   flex-flow: row nowrap;
 }

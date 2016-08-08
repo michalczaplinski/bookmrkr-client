@@ -1,4 +1,8 @@
 .tag {
+  min-width: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   border: dashed 1px black;
   padding-left: 4px;
   padding-right: 4px;

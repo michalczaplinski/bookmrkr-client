@@ -1,11 +1,10 @@
 import { combineReducers } from 'redux';
 import objectAssign from 'object-assign';
-import ReduxUndo from 'redux-undo';
 
 import * as types from '../actions/actionTypes';
 
 
-export function sidebar(state={}, action) {
+function sidebar(state={}, action) {
   switch (action.type) {
     case types.CLOSE_SIDEBAR:
       return objectAssign({}, state, {
@@ -23,30 +22,36 @@ export function sidebar(state={}, action) {
 }
 
 
-export function bookmarks(state=[], action) {
+function data(state={bookmarks: [], deleteQueue: []}, action) {
   switch (action.type) {
     case types.INITIAL_DATA_LOADED:
-      return action.data;
+      return {
+        ...state,
+        bookmarks: action.data
+      };
 
     case types.REMOVE_BOOKMARK_FROM_UI:
-      return state.filter((item) => item.id !== action.id);
+      const item = state.bookmarks.find(item => item.id == action.id);  //TODO: error handler
+      return {...state,
+        bookmarks: state.bookmarks.filter(item => item.id !== action.id),
+        deleteQueue: state.deleteQueue.concat(item)
+      };
+
+    case types.READD_BOOKMARK_TO_UI:
+      return {
+        ...state,
+        bookmarks: state.bookmarks.concat(state.deleteQueue.find(item => item.id == action.id)),
+        deleteQueue: state.deleteQueue.filter(item => item.id != action.id)
+      };
+
+    case types.DELETE_BOOKMARK_SUCCESS:
+      return {
+        ...state,
+        deleteQueue: state.deleteQueue.filter(item => item.id != action.id)
+      };
 
     default:
       return state;
-  }
-}
-
-
-export function deleteQueue(state=[], action) {
-  switch (action.type) {
-
-    case types.REMOVE_BOOKMARK_FROM_UI:
-      return [...state,
-        {
-
-        }
-
-      ];
   }
 }
 
@@ -68,6 +73,6 @@ export function errors(state = { network: [], exceptions: [] }, action) {
 
 export default combineReducers({
   sidebar,
-  bookmarks,
+  data,
   errors
 });

@@ -6,14 +6,10 @@ import GLOBALS from '../globals';
 
 function* performDelete(id) {
   try {
-    yield call(delay, 3000);
-
-    // TODO: make the API call
-    console.log('called api to delete bookmark');
-
+    yield call(delay, 5000);
     yield call(fetch, `${GLOBALS.api_path}/bookmarks/${id}`, {method: 'DELETE', credentials: 'include'} );
 
-    yield put({type: types.DELETE_BOOKMARK_SUCCESS});
+    yield put({type: types.DELETE_BOOKMARK_SUCCESS, id});
   } catch(error) {
     yield put({type: types.DELETE_BOOKMARK_ERROR, error});
   }
@@ -25,7 +21,6 @@ function* deleteBookmark() {
   while (true) {
     const { id } = yield take(types.DELETE_BOOKMARK);
 
-    console.log('deleting ' + id);
     yield put({type: types.REMOVE_BOOKMARK_FROM_UI, id});
     yield put({type: types.SHOW_UNDO});
 
@@ -33,7 +28,8 @@ function* deleteBookmark() {
 
     const action = yield take([types.CANCEL_DELETE_BOOKMARK, types.DELETE_BOOKMARK_ERROR, types.DELETE_BOOKMARK_SUCCESS]);
     if (action.type != types.DELETE_BOOKMARK_SUCCESS) {
-      yield cancel(task)
+      yield cancel(task);
+      yield put({type: types.READD_BOOKMARK_TO_UI, id})
     }
     yield put({type: types.HIDE_UNDO});  // TODO: THIS SHOULD GO ELSEWHERE...?
   }
