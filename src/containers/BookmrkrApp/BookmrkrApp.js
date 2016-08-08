@@ -24,7 +24,8 @@ class BookmrkrApp extends Component {
         <Sidebar/>
         <TopBar/>
         <div styleName="content-container">
-          <BookmarkList bookmarks={this.props.bookmarks}/>
+          <BookmarkList bookmarks={this.props.bookmarks}
+                        deleteBookmark={this.props.actions.deleteBookmark}/>
           <BookmarkAdder/>
         </div>
       </div>

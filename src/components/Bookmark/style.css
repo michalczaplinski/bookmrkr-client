@@ -5,7 +5,7 @@
   margin-bottom: 15px;
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-flow: row nowrap;
 }
 
 .image-container {
@@ -13,8 +13,9 @@
 }
 
 .content-container {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   padding: 5px;
 }
 
@@ -24,5 +25,20 @@
 
 .tags-container {
   display: flex;
-  flex-direction: row;
+  flex-flow: row nowrap;
+}
+
+.actions-container {
+  width: 30%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.delete-button {
+  cursor: pointer;
+}
+
+.edit-button {
+  cursor: pointer;
 }

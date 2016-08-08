@@ -10,12 +10,17 @@ class Bookmark extends Component {
   constructor(props) {
     super(props);
     this.props = props;
+    this.deleteBookmark = this.deleteBookmark.bind(this);
   }
 
-  _renderTag(tag) {
+  renderTag(tag) {
     return (
       <Tag key={tag.id} name={tag.name}/>
     )
+  }
+
+  deleteBookmark() {
+    return this.props.deleteBookmark(this.props.id);
   }
 
   render() {
@@ -35,7 +40,15 @@ class Bookmark extends Component {
             {this.props.description}
           </div>
           <div styleName="tags-container">
-            {this.props.tags.map(this._renderTag)}
+            {this.props.tags.map(this.renderTag)}
+          </div>
+        </div>
+        <div styleName="actions-container">
+          <div styleName="delete-button" onClick={this.deleteBookmark}>
+            X
+          </div>
+          <div styleName="edit-button">
+            e
           </div>
         </div>
       </div>

@@ -9,15 +9,18 @@ class BookmarkList extends Component {
   constructor(props) {
     super(props);
     this.props = props;
+    this._renderBookmark = this._renderBookmark.bind(this);
   }
 
   _renderBookmark(bookmark) {
     return (
       <Bookmark key={bookmark.id}
+                id={bookmark.id}
                 cover={bookmark.cover}
                 title={bookmark.title}
                 description={bookmark.description}
-                tags={bookmark.tags}>
+                tags={bookmark.tags}
+                deleteBookmark={this.props.deleteBookmark}>
       </Bookmark>
     )
   }

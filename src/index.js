@@ -25,14 +25,14 @@ const store = configureStore({
 });
 
 
-fetch(GLOBALS.api_path, {credentials: 'include'}).then(response => {
+fetch(`${GLOBALS.api_path}/bookmarks`, {credentials: 'include'}).then(response => {
   if (response.status >= 200 && response.status < 300) {
     return response.json();
   } else if (response.status == 403) {
-    console.log('403');
-    window.location.replace('http://bookmrkr-website.dev');  //TODO: update the URL.
+    window.location.replace(GLOBALS.website_path);  //TODO: update the URL.
   }
   throw new Error(response.status);
+
 }).then(json => {
   store.dispatch(initialDataLoaded(json));
   // render the application root
@@ -41,6 +41,7 @@ fetch(GLOBALS.api_path, {credentials: 'include'}).then(response => {
       <Router history={browserHistory} routes={routes} />
     </Provider>, document.getElementById('app')
   );
+
 }).catch(error => {
   console.log(error);
   store.dispatch(initialDataError(error));

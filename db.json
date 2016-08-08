@@ -1,26 +1,6 @@
 {
   "bookmarks": [
     {
-      "id": 90,
-      "url": "http://test.bookmark32e12354.com",
-      "title": "4324rew32142",
-      "description": "test bookmark 1 description",
-      "content": "",
-      "cover": null,
-      "date_created": "2016-02-24T00:08:29.093735Z",
-      "date_updated": "2016-02-24T00:08:29.093848Z",
-      "owner": "test",
-      "tags": [
-        {
-          "id": 43,
-          "name": "laallalalalla",
-          "owner": "test"
-        }
-      ],
-      "is_trashed": false,
-      "domain": "bookmark1.com"
-    },
-    {
       "id": 89,
       "url": "http://test.bookmark12353124.com",
       "title": "43432432142",
@@ -133,31 +113,6 @@
       "domain": "bookmark1.com"
     },
     {
-      "id": 81,
-      "url": "http://test.bookmark3.com",
-      "title": "test bookmark 3",
-      "description": "test bookmark 3",
-      "content": "test test test 3",
-      "cover": "/media/Hikikomori_Guide_to_Berlin_n3MPZKD.png",
-      "date_created": "2016-02-20T17:50:37.164003Z",
-      "date_updated": "2016-02-20T17:50:37.164032Z",
-      "owner": "test",
-      "tags": [
-        {
-          "id": 35,
-          "name": "test tag 1",
-          "owner": "test"
-        },
-        {
-          "id": 36,
-          "name": "test tag 2",
-          "owner": "test"
-        }
-      ],
-      "is_trashed": false,
-      "domain": "bookmark3.com"
-    },
-    {
       "id": 80,
       "url": "http://test.bookmark2.com",
       "title": "test bookmark 2",
@@ -178,7 +133,6 @@
       "domain": "bookmark2.com"
     }
   ],
-
   "tags": [
     {
       "id": 41,
