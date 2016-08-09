@@ -25,23 +25,26 @@ function* performDelete(id) {
 
 function* deleteBookmark(act) {
 
-  const { id } = act;
-  const cancelDone = yield actionChannel('CANCEL_DONE');
+  try {
+    const { id } = act;
+    const cancelDone = yield actionChannel('CANCEL_DONE');
 
-  yield put({type: types.REMOVE_BOOKMARK_FROM_UI, id});
-  yield put({type: types.SHOW_UNDO, id});
+    yield put({type: types.REMOVE_BOOKMARK_FROM_UI, id});
+    yield put({type: types.SHOW_UNDO, id});
 
-  const task = yield fork(performDelete, id);
+    const task = yield fork(performDelete, id);
 
-  const action = yield take([types.CANCEL_DELETE_BOOKMARK, types.DELETE_BOOKMARK_ERROR, types.DELETE_BOOKMARK_SUCCESS]);
+    const action = yield take([types.CANCEL_DELETE_BOOKMARK, types.DELETE_BOOKMARK_ERROR, types.DELETE_BOOKMARK_SUCCESS]);
 
-  if (action.type === types.CANCEL_DELETE_BOOKMARK || action.type === types.DELETE_BOOKMARK_ERROR) {
-    yield cancel(task);
-    yield take(cancelDone);
-    yield put({type: types.READD_BOOKMARK_TO_UI, id});
+    if (action.type === types.CANCEL_DELETE_BOOKMARK || action.type === types.DELETE_BOOKMARK_ERROR) {
+      yield cancel(task);
+      yield take(cancelDone);
+      yield put({type: types.READD_BOOKMARK_TO_UI, id});
+    }
+    yield put({type: types.HIDE_UNDO, id});  // TODO: THIS SHOULD GO ELSEWHERE...
+  } finally {
+    console.log('terminated');
   }
-  yield put({type: types.HIDE_UNDO, id});  // TODO: THIS SHOULD GO ELSEWHERE...
-
 }
 
 
