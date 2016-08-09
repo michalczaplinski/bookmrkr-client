@@ -4,7 +4,14 @@ import objectAssign from 'object-assign';
 import * as types from '../actions/actionTypes';
 
 
-function sidebar(state={}, action) {
+function ui(state={sidebar:{}, adder: {}}, action) {
+  return {
+    sidebar: sidebar(state.sidebar, action),
+    adder:   adder(state.adder, action)
+  }
+}
+
+function sidebar(state={isOpen: false}, action) {
   switch (action.type) {
     case types.CLOSE_SIDEBAR:
       return objectAssign({}, state, {
@@ -12,6 +19,23 @@ function sidebar(state={}, action) {
       });
 
     case types.OPEN_SIDEBAR:
+      return objectAssign({}, state, {
+        isOpen: true
+      });
+
+    default:
+      return state;
+  }
+}
+
+function adder(state={isOpen: false}, action) {
+  switch (action.type) {
+    case types.CLOSE_BOOKMARK_ADDER:
+      return objectAssign({}, state, {
+        isOpen: false
+      });
+
+    case types.OPEN_BOOKMARK_ADDER:
       return objectAssign({}, state, {
         isOpen: true
       });
@@ -85,7 +109,7 @@ export function errors(state = { network: [], exceptions: [] }, action) {
 
 
 export default combineReducers({
-  sidebar,
+  ui,
   data,
   errors,
   notifications

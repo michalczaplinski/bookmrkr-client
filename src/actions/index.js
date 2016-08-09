@@ -25,3 +25,8 @@ export function closeSidebar() { return { type: types.OPEN_SIDEBAR } }
 ///////////////// BOOKMARK ACTIONS
 export function deleteBookmark(id) { return { type: types.DELETE_BOOKMARK, id } }
 export function cancelDeleteBookmark(id) { return { type: types.CANCEL_DELETE_BOOKMARK, id }}
+
+
+///////////////// BOOKMARK ADDER
+export function openBookmarkAdder() { return { type: types.OPEN_BOOKMARK_ADDER }}
+export function closeBookmarkAdder() { return { type: types.CLOSE_BOOKMARK_ADDER }}

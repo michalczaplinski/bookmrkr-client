@@ -12,3 +12,18 @@
   width: 100%;
   align-items: center;
 }
+
+.close-modal {
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+
+/*
+ * z-indexes:
+ * sidebar: 20;
+ * topbar: 10;
+ * bookmark adder button: 30;
+ * notifications (the container): 40;
+ * add bookmarks popup: 100;
+ */

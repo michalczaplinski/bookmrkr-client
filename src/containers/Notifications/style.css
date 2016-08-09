@@ -1,7 +1,7 @@
 .notifications-container {
   position: fixed;
   bottom: 2px;
-  z-index: 30;
+  z-index: 40;
 }
 
 

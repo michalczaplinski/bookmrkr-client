@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import Modal from 'react-modal';
 import * as actions from '../../actions';
 
 import Sidebar from './../../components/Sidebar/Sidebar';
@@ -11,6 +12,15 @@ import Notifications from '../Notifications/Notifications';
 
 import CSSModules from 'react-css-modules';
 import styles from './style.css';
+
+const modalStyles = {
+  overlay: {zIndex: 90} ,
+  content: {
+    zIndex: 100,
+    display: 'flex',
+    flexFlow: 'column nowrap'
+  }
+};
 
 class BookmrkrApp extends Component {
 
@@ -27,10 +37,16 @@ class BookmrkrApp extends Component {
         <div styleName="content-container">
           <BookmarkList bookmarks={this.props.data.bookmarks}
                         deleteBookmark={this.props.actions.deleteBookmark}/>
-          <BookmarkAdder/>
+          <BookmarkAdder open={this.props.actions.openBookmarkAdder}/>
           <Notifications notifications={this.props.notifications}
                          cancelDeleteBookmark={this.props.actions.cancelDeleteBookmark}
           />
+          <Modal
+            isOpen={this.props.ui.adder.isOpen}
+            onRequestClose={this.props.actions.closeBookmarkAdder}
+            style={modalStyles}>
+            <div styleName="close-modal" onClick={this.props.actions.closeBookmarkAdder}> X </div>
+          </Modal>
         </div>
       </div>
     )

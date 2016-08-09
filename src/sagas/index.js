@@ -1,12 +1,12 @@
 import * as types from '../actions/actionTypes';
-import { delay, takeEvery, takeLatest } from 'redux-saga'
-import { call, put, take, fork, cancel, cancelled, spawn, actionChannel } from 'redux-saga/effects'
+import { delay, takeEvery } from 'redux-saga'
+import { call, put, take, cancelled, race } from 'redux-saga/effects'
 import GLOBALS from '../globals';
 
 
 function* performDelete(id) {
   try {
-    yield call(delay, 5000);
+    yield call(delay, 8000);
 
     //todo: add another action when the times to delete
     // passes, so that we can safely call DELETE on our API
@@ -15,36 +15,28 @@ function* performDelete(id) {
     yield put({type: types.DELETE_BOOKMARK_SUCCESS, id});
   } catch(error) {
     yield put({type: types.DELETE_BOOKMARK_ERROR, error});
-  } finally {
-    if (yield cancelled() ) {
-      yield put({type: 'CANCEL_DONE'})
-    }
   }
 }
 
 
 function* deleteBookmark(act) {
 
-  try {
-    const { id } = act;
-    const cancelDone = yield actionChannel('CANCEL_DONE');
+  const { id } = act;
+  yield put({type: types.REMOVE_BOOKMARK_FROM_UI, id});
+  yield put({type: types.SHOW_UNDO, id});
 
-    yield put({type: types.REMOVE_BOOKMARK_FROM_UI, id});
-    yield put({type: types.SHOW_UNDO, id});
+  const { response, cancelDeleting } = yield race({
+    delete: call(performDelete, id),
+    cancelDeleting: take((action) => { return (action.type === types.DELETE_BOOKMARK_ERROR
+      || action.type === types.CANCEL_DELETE_BOOKMARK)
+      && action.id === id })
+  });
 
-    const task = yield fork(performDelete, id);
-
-    const action = yield take([types.CANCEL_DELETE_BOOKMARK, types.DELETE_BOOKMARK_ERROR, types.DELETE_BOOKMARK_SUCCESS]);
-
-    if (action.type === types.CANCEL_DELETE_BOOKMARK || action.type === types.DELETE_BOOKMARK_ERROR) {
-      yield cancel(task);
-      yield take(cancelDone);
-      yield put({type: types.READD_BOOKMARK_TO_UI, id});
-    }
-    yield put({type: types.HIDE_UNDO, id});  // TODO: THIS SHOULD GO ELSEWHERE...
-  } finally {
-    console.log('terminated');
+  if (cancelDeleting) {
+    yield put({type: types.READD_BOOKMARK_TO_UI, id});
   }
+  yield put({type: types.HIDE_UNDO, id});
+
 }
 
 

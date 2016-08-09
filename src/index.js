@@ -18,11 +18,7 @@ import style from '../node_modules/sanitize.css/sanitize.css';
 
 
 // initial state
-const store = configureStore({
-  sidebar : {
-    isOpen: false
-  }
-});
+const store = configureStore();
 
 
 fetch(`${GLOBALS.api_path}/bookmarks`, {credentials: 'include'}).then(response => {
