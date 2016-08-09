@@ -21,6 +21,19 @@ function sidebar(state={}, action) {
   }
 }
 
+function notifications(state=[], action) {
+  switch (action.type) {
+    case types.SHOW_UNDO:
+      return state.concat(action.id);
+
+    case types.HIDE_UNDO:
+      return state.filter(id => id != action.id);
+
+    default:
+      return state;
+  }
+}
+
 
 function data(state={bookmarks: [], deleteQueue: []}, action) {
   switch (action.type) {
@@ -74,5 +87,6 @@ export function errors(state = { network: [], exceptions: [] }, action) {
 export default combineReducers({
   sidebar,
   data,
-  errors
+  errors,
+  notifications
 });

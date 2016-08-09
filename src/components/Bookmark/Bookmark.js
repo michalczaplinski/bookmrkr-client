@@ -34,7 +34,7 @@ class Bookmark extends Component {
         </a>
         <div styleName="content-container">
           <div styleName="header">
-            <b>{this.props.title}</b>
+            <b>{this.props.id + ' ' + this.props.title}</b>
           </div>
           <div styleName="description">
             {this.props.description}
