@@ -13,11 +13,6 @@
   align-items: center;
 }
 
-.close-modal {
-  cursor: pointer;
-  align-self: flex-end;
-}
-
 
 /*
  * z-indexes:
