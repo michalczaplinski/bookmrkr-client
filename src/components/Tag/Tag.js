@@ -4,9 +4,9 @@ import styles from './style.css';
 
 const Tag = ({name}) => {
   return (
-    <a styleName="tag" href="#">
+    <div styleName="tag">
       {name}
-    </a>
+    </div>
   )
 };
 

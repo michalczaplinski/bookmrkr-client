@@ -9,9 +9,5 @@
   margin-right: 5px;
   font-size: 13px;
   background: lightskyblue;
-}
-
-a.tag {
-  text-decoration: none;
-  color: inherit;
+  cursor: pointer;
 }
