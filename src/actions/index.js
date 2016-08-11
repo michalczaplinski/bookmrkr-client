@@ -30,3 +30,14 @@ export function cancelDeleteBookmark(id) { return { type: types.CANCEL_DELETE_BO
 ///////////////// BOOKMARK ADDER
 export function openBookmarkAdder() { return { type: types.OPEN_BOOKMARK_ADDER }}
 export function closeBookmarkAdder() { return { type: types.CLOSE_BOOKMARK_ADDER }}
+
+
+///////////////// CREATE BOOKMARK
+export function createBookmark(data) {
+  return {
+    type: types.CREATE_BOOKMARK,
+    ...data
+  }
+}
+export function createBookmarkSuccess() { return types.CREATE_BOOKMARK_SUCCESS }
+export function createBookmarkError() { return types.CREATE_BOOKMARK_ERROR }

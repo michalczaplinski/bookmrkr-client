@@ -15,7 +15,7 @@ import GLOBALS from './globals';
 
 // sanitize.css (CSS reset)
 import style from '../node_modules/sanitize.css/sanitize.css';
-
+import './style.css'
 
 // initial state
 const store = configureStore();

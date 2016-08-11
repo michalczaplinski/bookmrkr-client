@@ -32,7 +32,9 @@ class BookmrkrApp extends Component {
           <Notifications notifications={this.props.notifications}
                          cancelDeleteBookmark={this.props.actions.cancelDeleteBookmark}/>
           <BookmarkAdderModal isOpen={this.props.ui.adder.isOpen}
-                              close={this.props.actions.closeBookmarkAdder}/>
+                              close={this.props.actions.closeBookmarkAdder}
+                              createBookmark={this.props.actions.createBookmark}
+          />
         </div>
       </div>
     )
